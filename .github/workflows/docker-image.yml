@@ -14,10 +14,6 @@ jobs:
 
     - name: Checkout Github Repo
       uses: actions/checkout@v4
-      with:
-        # submodules: recursive
-        submodules: 'true'
-        token: ${{ secrets.CHECKOUT_REPO_TOKEN }}
 
     - name: Set Branch Name
       run: echo "BRANCH_NAME=$(echo $GITHUB_REF | sed 's/refs\/heads\///')" >> $GITHUB_ENV
